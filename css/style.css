@@ -101,7 +101,7 @@ nav ul {
   border-right: 3px solid rgba(0, 0, 0, 0.2);
 }
 
-.page-section p {
+.introText {
   flex: 1 1 content;
   overflow-wrap: break-word;
   margin-left: 20px;
@@ -118,17 +118,52 @@ nav ul {
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 300px 100px 100px;
   grid-template-areas:
     "mainProject mainProject"
-    "otherProject otherProject"
-    "otherProject otherProject";
+    "otherProject1 otherProject2"
+    "otherProject3 otherProject4";
+
+  width: 100%;
+  margin-left: 20px;
+}
+.gridItem {
+  display: flex;
+  overflow: hidden;
+}
+
+.mainProject img {
+  transition: 0.5s ease all;
+  /* height: 300px; */
+}
+
+.projectImage {
+  overflow: hidden;
+  max-width: 50%;
+}
+.mainProject img:hover {
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.otherProject img {
+}
+
+.CTA:hover {
+  margin-left: 30px;
+  transition: 0.5s ease all;
+  align-items: baseline;
 }
 
 .mainProject {
-  grid-area: "mainProject";
+  grid-area: mainProject;
+  background-color: red;
 }
 
-.otherProject {
-  grid-area: "otherProject";
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
 }
