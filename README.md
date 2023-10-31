@@ -8,7 +8,7 @@ Here is the link to the deployed application: https://whefert.github.io/jdaley-p
 
 See screenshot of the site below.
 
-![Screenshot of Portfolio Website](./images/final_site_screenshot.png)
+![Screenshot of Portfolio Website](final_site_screenshot.png)
 
 ### Acceptance Criteria
 
