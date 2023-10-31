@@ -107,12 +107,12 @@ nav ul {
 .page-section h2 {
   text-align: right;
   padding-right: 10px;
-  flex: 0 0 200px;
+  flex: 0 0 20%;
   border-right: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .introText {
-  flex: 1 1 content;
+  /* flex: 1 1 content; */
   overflow-wrap: break-word;
   margin-left: 20px;
 }
@@ -136,6 +136,7 @@ nav ul {
   width: 100%;
   margin-left: 20px;
 }
+
 .gridItem {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -188,4 +189,69 @@ nav ul {
 }
 .otherProject .content {
   padding: 10px;
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 768px) {
+  .gridContainer {
+    grid-template-rows: 320px 175px 175px;
+  }
+  .techUsed {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gridItem {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "projectImage"
+      "projectDetails";
+    background-color: var(--secondary);
+  }
+
+  li {
+    display: block;
+  }
+  nav li {
+    margin: 0px;
+  }
+  nav ul {
+    padding-left: 10px;
+  }
+
+  header {
+    justify-content: start;
+  }
+
+  .page-section {
+    flex-direction: column;
+  }
+
+  header h1 {
+    max-width: 45%;
+    padding: 10px;
+    background-color: var(--primary);
+    margin: 10px 0;
+    color: white;
+  }
+
+  .mainProject img {
+    height: 150px;
+  }
+
+  .contact ul {
+    flex-direction: column;
+  }
+  .page-section h2 {
+    border-right: 0px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: right;
+  }
 }

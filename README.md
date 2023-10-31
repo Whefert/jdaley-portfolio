@@ -4,17 +4,20 @@
 
 Portfolio website showcasing the web and mobile applications I've made so far which I am most proud of. The website includes images of and links to the GitHub repos for featured projects as well as my contact information for prospective employers to get in touch.
 
-Here is the link to the deployed application: https://whefert.github.io/horiseon-website-refactor/
+Here is the link to the deployed application: https://whefert.github.io/jdaley-portfolio/
+
+See screenshot of the site below.
+
+![Screenshot of Portfolio Website](./images/final_site_screenshot.png)
 
 ### Acceptance Criteria
 
-The website must meet accessibility standards including but not limited to:
-
-- Semantic HTML elements can be found throughout the source code
-- HTML elements follow a logical structure independent of styling and positioning
-- Image and icon elements contain accessible `alt` attributes
-- Heading attributes fall in sequential order
-- Title elements contain a concise, descriptive title
+- When the page is loaded, the page presents my name, a recent photo or avatar, and links to sections about me, my work, and how to contact me
+- When one of the links in the navigation is clicked then the UI scrolls to the corresponding section
+- When viewing the section about my work, the section contains titled images of my applications
+- When presented with the my first application, that application's image is larger in size than the others
+- When images of the applications are clicked then the user is taken to that deployed application
+- When the page is resized or viewed on various screens and devices then the layout is responsive and adapts to my viewport
 
 ## Installation
 
@@ -22,7 +25,7 @@ N/A
 
 ## Usage
 
-To use the refactored Horiseon Website, simply visit the url for the deployed application and use the links in the header to navigate the page.
+To view my work portfolio website, simply visit the url for the deployed application and use the links in the header to navigate the page.
 
 ## Credits
 
