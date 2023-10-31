@@ -1,7 +1,9 @@
 :root {
-  --primary: red;
-  --secondary: yellow;
-  --tertiary: darkgrey;
+  --primary: #009b3a;
+  --secondary: #fcead9;
+  --secondary: #fcead9;
+  --tertiary: rgba(0, 0, 0, 0.9);
+  --highight: #fed100;
 }
 * {
   box-sizing: border-box;
@@ -36,22 +38,30 @@ a {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
 }
 
 header h1 {
   padding: 0px 10px 0px 50px;
   background-color: var(--primary);
-  margin: 5px 0;
+  margin: 10px 0;
+  color: white;
 }
 
 li {
   display: inline;
   border-bottom: 5px solid var(--primary);
+  font-size: 1.3rem;
 }
+
+li:hover {
+  border-bottom: 5px var(--tertiary) solid;
+}
+
 nav li {
   padding: 0px 5px;
-  margin: 0px;
+  margin: 0px 5px;
+  /* color: white; */
 }
 nav ul {
   margin-right: 50px;
@@ -118,52 +128,64 @@ nav ul {
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px 100px 100px;
+  grid-template-rows: 300px 150px 150px;
   grid-template-areas:
     "mainProject mainProject"
-    "otherProject1 otherProject2"
-    "otherProject3 otherProject4";
-
+    "otherProject otherProject"
+    "otherProject otherProject";
   width: 100%;
   margin-left: 20px;
 }
 .gridItem {
-  display: flex;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "projectImage projectDetails";
+  background-color: var(--secondary);
 }
 
-.mainProject img {
+.gridItem img {
   transition: 0.5s ease all;
-  /* height: 300px; */
+}
+
+.otherProject {
+  margin-top: 20px;
 }
 
 .projectImage {
   overflow: hidden;
-  max-width: 50%;
 }
-.mainProject img:hover {
+.gridItem img:hover {
   transform: scale(
     1.1
   ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-.otherProject img {
+.CTA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.CTA svg {
+  margin-left: 5px;
 }
 
 .CTA:hover {
   margin-left: 30px;
   transition: 0.5s ease all;
-  align-items: baseline;
 }
 
 .mainProject {
   grid-area: mainProject;
-  background-color: red;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.mainProject .content {
   padding: 20px;
+}
+.otherProject .content {
+  padding: 10px;
 }
